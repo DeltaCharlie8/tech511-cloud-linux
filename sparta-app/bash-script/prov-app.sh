@@ -36,12 +36,13 @@ echo Done!
 echo
 
 
-# asks for user input - FIX
+# run script to install nodejs
 echo run script to update things to install node js v20... 
 sudo DEBIAN_FRONTEND=noninteractive bash nodesource_setup.sh
 echo Done!
 echo
 
+# Install nodejs
 echo Install node js v20...
 sudo DEBIAN_FRONTEND=noninteractive apt install nodejs 
 echo Done!
@@ -54,7 +55,8 @@ echo Done!
 echo
 
 # set env
-export DB_HOST=mongodb://34.245.216.70:27017/posts
+# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts
+export DB_HOST=mongodb://54.155.16.84:27017/posts
 
 # get app code using a git clone commmand
 echo clone app folder in bash...
@@ -64,7 +66,7 @@ echo
 
 # cd into app folder 
 echo cd into app folder...
-cd app/
+cd app-code/app
 echo Done!
 echo
 

@@ -1,4 +1,4 @@
-# Manual deploymeny of Sparta Node app
+# Manual deployment of Sparta Node app
 
 ## Copy and run zipped app using scp
 example of format:

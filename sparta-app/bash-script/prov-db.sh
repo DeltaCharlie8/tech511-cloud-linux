@@ -6,20 +6,21 @@
 # Tested by: 
 # Tested when: 
 
+# update
 echo update...
 sudo apt update
 echo Done!
 echo
  
-# upgrade - asks for user input - FIX!
+# upgrade 
 echo upgrade...
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 echo Done!
 echo
 
 # install gnupg
-echo gnupgand curl
-sudo apt-get install gnupg curl
+echo gnupg 
+sudo apt-get install gnupg 
 echo Done!
 echo
 
@@ -44,7 +45,7 @@ echo Done!
 echo
 
 # Install MongoDB server
-echo install server...
+echo install MongoDB v7 server...
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
    mongodb-org=7.0.22 \
    mongodb-org-database=7.0.22 \
@@ -54,22 +55,30 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
    mongodb-org-mongos=7.0.22 \
    mongodb-org-tools=7.0.22 \
    mongodb-org-database-tools-extra=7.0.22
+echo Done!
+echo
 
 # check status
 sudo systemctl status mongod 
 
-# use sed command to edit MongoDB config file, change bindIP to 0.0.0.0
+
 
 # start mongoDB
 sudo systemctl start mongod
-
+echo Done!
+echo
 
 # enable mongoDB
 sudo systemctl enable mongod
-
-
+echo Done!
+echo
 
 # dependencies
 # https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
 
 # restart mongo
+
+# use sed command to edit MongoDB config file, change bindIP from 127.0.0.1 to 0.0.0.0
+sed 's/bindIp: 0.0.0.0/bindIp 127.0.0.1/g' /etc/mongod.conf
+echo Done!
+echo
