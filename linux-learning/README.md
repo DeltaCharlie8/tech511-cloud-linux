@@ -11,6 +11,8 @@
   - [Managing file permissions using numerical values](#managing-file-permissions-using-numerical-values)
     - [Different permission assignments](#different-permission-assignments)
   - [Changing file permissions](#changing-file-permissions)
+  - [Bash script to install Nginx](#bash-script-to-install-nginx)
+  - [Managing processes in Linux](#managing-processes-in-linux)
 
 
 ## Why learn Linux?
@@ -100,3 +102,82 @@ For example: 644
 
 
 ## Changing file permissions
+1. What command changes file permissions?
+
+The command is:
+
+chmod
+
+
+(stands for change mode).
+
+2. To change permissions on a file, what must the end user be? (2 answers)
+
+The owner of the file.
+
+Or the root (superuser).
+
+3. Examples with chmod on testfile.txt:
+a) Set User = read, Group = read+write+execute, Other = read+write only
+
+Using symbolic method:
+
+chmod u=r, g=rwx, o=rw testfile.txt
+
+
+Using numeric method:
+
+User r-- = 4
+
+Group rwx = 7
+
+Other rw- = 6
+
+chmod 476 testfile.txt
+
+b) Add execute permissions (to all entities)
+
+Symbolic:
+
+chmod a+x testfile.txt
+
+
+(a = all, +x = add execute).
+
+c) Take write permissions away from Group
+
+Symbolic:
+
+chmod g-w testfile.txt
+
+d) Use numeric values to give User = read+write, Group = read, Other = no access
+
+User rw- = 6
+
+Group r-- = 4
+
+Other --- = 0
+
+chmod 640 testfile.txt
+
+
+
+## Bash script to install Nginx
+to link to bash script, drag the file in, hold shift and let go. You can now access it here [text](bash-scripts/prov-nginx.sh)
+
+## Managing processes in Linux
+what is a process
+- a program that loads into RAM/memory and uses CPU when needed
+
+2 types of processes in Linux
+- User
+- System
+
+to see all processes
+- ps -e
+- ps aux (gives you lots of columns and details on the processes)
+- top (provides real time details with headers)
+
+
+to kill the sleep process
+- kill -1 1306
