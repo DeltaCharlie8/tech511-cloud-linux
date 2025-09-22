@@ -22,8 +22,19 @@ sudo DEBIAN_FRONTEND=noninteractive apt install nginx -y
 echo Done!
 echo
 
-# configure nginx
+# restart nginx
+echo restart nginx...
+sudo systemctl restart nginx
+echo Done!
+echo
 
+#configure nginx reverse proxy
+echo configure nginx reverse proxy
+sudo sed -i 's|try_files \$uri \$uri/ =404;|proxy_pass http://localhost:3000/;|' /etc/nginx/sites-available/default
+echo Done!
+echo
+
+# restart nginx again
 echo restart nginx...
 sudo systemctl restart nginx
 echo Done!
@@ -35,32 +46,21 @@ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
 echo Done!
 echo
 
-
 # run script to install nodejs
 echo run script to update things to install node js v20... 
-sudo DEBIAN_FRONTEND=noninteractive bash nodesource_setup.sh
+sudo DEBIAN_FRONTEND=noninteractive bash nodesource_setup.sh -y
 echo Done!
 echo
 
 # Install nodejs
 echo Install node js v20...
-sudo DEBIAN_FRONTEND=noninteractive apt install nodejs 
+sudo DEBIAN_FRONTEND=noninteractive apt install nodejs -y
 echo Done!
 echo
-
-# update again
-echo update...
-sudo apt update
-echo Done!
-echo
-
-# set env
-# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts
-export DB_HOST=mongodb://54.155.16.84:27017/posts
 
 # get app code using a git clone commmand
 echo clone app folder in bash...
-sudo git clone https://github.com/DeltaCharlie8/app-code.git
+git clone https://github.com/DeltaCharlie8/app-code.git
 echo Done!
 echo
 
@@ -72,18 +72,12 @@ echo
 
 # run npm install
 echo Install npm...
-sudo npm install
+npm install
 echo Done!
-
-# update again
-echo update...
-sudo apt update
-echo Done!
-echo
 
 # install pm2
 echo Installing PM2...
-sudo npm install pm2@latest -g
+sudo npm install pm2 -g
 echo Done!
 echo
 
@@ -98,3 +92,7 @@ echo Starting up the app...
 pm2 start app.js
 echo Done!
 echo
+
+# set env variable
+# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts
+export DB_HOST=mongodb://34.244.159.12:27017/posts

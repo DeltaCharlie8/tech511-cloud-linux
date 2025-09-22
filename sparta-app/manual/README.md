@@ -22,4 +22,23 @@ scp -i tech511-debbie-aws.pem -r C:\Users\debbi\Downloads\nodejs20-sparta-test-a
    sudo apt install -y unzip
    ```
 2. Unzip the file
-3. ```
+
+
+## To run the script
+1. copy script from local machine
+   ```
+   scp -i /path/to/your-key.pem prov-app.sh ubuntu@EC2_PUBLIC_IP:/home/ubuntu/
+   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-app.sh ubuntu@ec2-18-202-167-222:/home/ubuntu/
+   ```
+2. SSH into your Virtual Machine
+   ```
+   ssh -i /path/to/your-key.pem ubuntu@EC2_PUBLIC_IP
+   ```
+3. make script executable
+   ```
+   chmod +x prov-app.sh
+   ```
+4. run script
+   ```
+   ./prov-app.sh
+   ```
