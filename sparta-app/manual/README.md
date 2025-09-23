@@ -1,5 +1,8 @@
 # Manual deployment of Sparta Node app
 
+# dependencies
+https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
+
 ## Copy and run zipped app using scp
 example of format:
 ```
@@ -23,12 +26,15 @@ scp -i tech511-debbie-aws.pem -r C:\Users\debbi\Downloads\nodejs20-sparta-test-a
    ```
 2. Unzip the file
 
+### You need to set the DB_Host before starting the app
 
 ## To run the script
+Please note: You will need 2 git terminals running, one connected to your local machine in the directory of your bash script and the other connected to your virtual machine in the home directory
 1. copy script from local machine
    ```
    scp -i /path/to/your-key.pem prov-app.sh ubuntu@EC2_PUBLIC_IP:/home/ubuntu/
-   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-app.sh ubuntu@ec2-18-202-167-222:/home/ubuntu/
+   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-app.sh ubuntu@63.33.200.32:~
+
    ```
 2. SSH into your Virtual Machine
    ```
@@ -42,3 +48,9 @@ scp -i tech511-debbie-aws.pem -r C:\Users\debbi\Downloads\nodejs20-sparta-test-a
    ```
    ./prov-app.sh
    ```
+
+## running database script
+1. ssh into database
+2. run script
+3. connect to vm app
+4. check posts page

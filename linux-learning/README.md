@@ -181,3 +181,6 @@ to see all processes
 
 to kill the sleep process
 - kill -1 1306
+
+to check environment variables
+- printenv

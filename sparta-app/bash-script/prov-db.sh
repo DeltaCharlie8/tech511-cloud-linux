@@ -58,8 +58,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
 echo Done!
 echo
 
-# check status
-sudo systemctl status mongod 
+# use sed command to edit MongoDB config file, change bindIP from 127.0.0.1 to 0.0.0.0
+sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf
+echo Done!
+echo
 
 # start mongoDB
 sudo systemctl start mongod
@@ -68,13 +70,5 @@ echo
 
 # enable mongoDB
 sudo systemctl enable mongod
-echo Done!
-echo
-
-# dependencies
-# https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
-
-# use sed command to edit MongoDB config file, change bindIP from 127.0.0.1 to 0.0.0.0
-sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf
 echo Done!
 echo

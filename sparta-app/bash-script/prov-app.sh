@@ -70,6 +70,10 @@ cd app-code/app
 echo Done!
 echo
 
+# set env variable
+# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts
+export DB_HOST=mongodb://54.78.122.64/posts
+
 # run npm install
 echo Install npm...
 npm install
@@ -93,6 +97,3 @@ pm2 start app.js
 echo Done!
 echo
 
-# set env variable
-# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts
-export DB_HOST=mongodb://34.244.159.12:27017/posts
