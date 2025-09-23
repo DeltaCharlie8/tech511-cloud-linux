@@ -71,8 +71,8 @@ echo Done!
 echo
 
 # set env variable
-# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts
-export DB_HOST=mongodb://54.78.122.64/posts
+# export DB_HOST=mongodb://<IP-ADDRESS>:27017/posts (THE IP ADDRESS WILL NEED TO BE CHANGED ONCE YOU HAVE THE NEW DB RUNNING)
+export DB_HOST=mongodb://34.247.163.40:27017/posts
 
 # run npm install
 echo Install npm...

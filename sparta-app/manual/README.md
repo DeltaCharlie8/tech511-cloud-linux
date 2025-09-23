@@ -33,9 +33,11 @@ Please note: You will need 2 git terminals running, one connected to your local 
 1. copy script from local machine
    ```
    scp -i /path/to/your-key.pem prov-app.sh ubuntu@EC2_PUBLIC_IP:/home/ubuntu/
-   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-app.sh ubuntu@63.33.200.32:~
+   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-app.sh ubuntu@3.250.114.43:~ 
 
    ```
+
+   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-db.sh ubuntu@34.247.163.40:~ 
 2. SSH into your Virtual Machine
    ```
    ssh -i /path/to/your-key.pem ubuntu@EC2_PUBLIC_IP
@@ -54,3 +56,18 @@ Please note: You will need 2 git terminals running, one connected to your local 
 2. run script
 3. connect to vm app
 4. check posts page
+
+
+
+
+
+### 1. load 3 git bash terminals
+- one for your local machine, you must be in the directory of your bash scripts.
+- one for your app virtual machine
+- one for your database virtual machine 
+### 2. Connect to the database vm first
+### 3. 
+### 4. 
+### 5. 
+### 6. 
+### 7. 
