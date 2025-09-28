@@ -104,66 +104,52 @@ For example: 644
 ## Changing file permissions
 1. What command changes file permissions?
 
-The command is:
+    The command is:
 
-chmod
+    chmod
 
 
-(stands for change mode).
+    (stands for change mode).
 
 2. To change permissions on a file, what must the end user be? (2 answers)
 
-The owner of the file.
+    The owner of the file.
 
-Or the root (superuser).
+    Or the root (superuser).
 
 3. Examples with chmod on testfile.txt:
-a) Set User = read, Group = read+write+execute, Other = read+write only
+   
+    a. Set User = read, Group = read+write+execute, Other = read+write only
 
-Using symbolic method:
+        Using symbolic method:
+        chmod u=r, g=rwx, o=rw testfile.txt
 
-chmod u=r, g=rwx, o=rw testfile.txt
+        Using numeric method:
+        User r-- = 4
+        Group rwx = 7
+        Other rw- = 6
+        chmod 476 testfile.txt
 
+    b. Add execute permissions (to all entities)
 
-Using numeric method:
+        Symbolic:
+        chmod a+x testfile.txt
+        (a = all, +x = add execute).
 
-User r-- = 4
+    c. Take write permissions away from Group
 
-Group rwx = 7
+        Symbolic:
+        chmod g-w testfile.txt
 
-Other rw- = 6
+    d. Use numeric values to give User = read+write, Group = read, Other = no access
 
-chmod 476 testfile.txt
-
-b) Add execute permissions (to all entities)
-
-Symbolic:
-
-chmod a+x testfile.txt
-
-
-(a = all, +x = add execute).
-
-c) Take write permissions away from Group
-
-Symbolic:
-
-chmod g-w testfile.txt
-
-d) Use numeric values to give User = read+write, Group = read, Other = no access
-
-User rw- = 6
-
-Group r-- = 4
-
-Other --- = 0
-
-chmod 640 testfile.txt
-
-
+        User rw- = 6
+        Group r-- = 4
+        Other --- = 0
+        chmod 640 testfile.txt
 
 ## Bash script to install Nginx
-to link to bash script, drag the file in, hold shift and let go. You can now access it here [text](bash-scripts/prov-nginx.sh)
+To link to bash script, drag the file in, hold shift and let go. You can now access it here [bash script](bash-scripts/prov-nginx.sh)
 
 ## Managing processes in Linux
 what is a process

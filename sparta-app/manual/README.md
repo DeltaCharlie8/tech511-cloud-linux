@@ -1,7 +1,34 @@
 # Manual deployment of Sparta Node app
+- [Manual deployment of Sparta Node app](#manual-deployment-of-sparta-node-app)
+  - [Dependencies](#dependencies)
+  - [Building your database](#building-your-database)
+  - [Building your app](#building-your-app)
+  - [Running the app](#running-the-app)
+  - [Copy and run zipped app using scp](#copy-and-run-zipped-app-using-scp)
+  - [Unzip the app code](#unzip-the-app-code)
+    - [You need to set the DB\_Host before starting the app](#you-need-to-set-the-db_host-before-starting-the-app)
+  - [To run the script](#to-run-the-script)
+  - [running database script](#running-database-script)
+    - [1. load 3 git bash terminals](#1-load-3-git-bash-terminals)
+    - [2. Connect to the database vm first](#2-connect-to-the-database-vm-first)
+    - [3.](#3)
+    - [4.](#4)
+    - [5.](#5)
+    - [6.](#6)
+    - [7.](#7)
 
-# dependencies
+
+## Dependencies
 https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu
+
+
+## Building your database
+
+## Building your app
+
+## Running the app
+
+
 
 ## Copy and run zipped app using scp
 example of format:

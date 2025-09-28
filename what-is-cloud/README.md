@@ -1,7 +1,6 @@
 # Intro to cloud
 
 - [Intro to cloud](#intro-to-cloud)
-- [Questions to answer](#questions-to-answer)
   - [What is cloud computing?](#what-is-cloud-computing)
   - [How do we know something is running in the cloud?](#how-do-we-know-something-is-running-in-the-cloud)
   - [Models of cloud deployment](#models-of-cloud-deployment)
@@ -23,7 +22,6 @@
 
 <br>
 
-# Questions to answer
 ## What is cloud computing?
 - delivery of databases, storages, applications and others..
 - pay as you go pricing (get charged for the amount used)
