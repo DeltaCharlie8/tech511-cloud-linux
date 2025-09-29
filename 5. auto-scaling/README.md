@@ -5,10 +5,10 @@
     - [Vertical scaling](#vertical-scaling)
     - [Horizontal scaling](#horizontal-scaling)
   - [Planning the auto scaling group architecture to provide High Availability(HA) and Scalability(SC)](#planning-the-auto-scaling-group-architecture-to-provide-high-availabilityha-and-scalabilitysc)
-  - [Create a launch template](#create-a-launch-template)
-  - [Create a CPU Alarm](#create-a-cpu-alarm)
-  - [Code-Along: Security Group](#code-along-security-group)
-  - [Code-Along: Create a dashboard](#code-along-create-a-dashboard)
+- [Create a launch template](#create-a-launch-template)
+- [Code-Along: Create Security Groups](#code-along-create-security-groups)
+- [Code-Along: Create a dashboard](#code-along-create-a-dashboard)
+- [Code-Along: Create a CPU Alarm](#code-along-create-a-cpu-alarm)
 
 ## Why use auto scaling
 scale from worse to better
@@ -53,11 +53,15 @@ Also refered to as scaling out(bigger)/in(smaller). You can create duplicates of
 6. regions (Ireland)
    - availability zones that host the virtual machines
 
-## Create a launch template
+# Create a launch template
 1. log into AWS
 2. select launch template
 
-## Create a CPU Alarm 
+# Code-Along: Create Security Groups
+
+# Code-Along: Create a dashboard
+
+# Code-Along: Create a CPU Alarm 
 *why create an alarm inc diagram*
 
 install apache bench
@@ -92,21 +96,3 @@ sudo apt-get install apache2-utils
 ![alt text](../images/cpu-alarm-7.png)
 
 11. ec2 instance updates after alarm is triggered
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Code-Along: Security Group
-
-## Code-Along: Create a dashboard
-

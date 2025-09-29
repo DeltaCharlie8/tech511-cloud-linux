@@ -7,10 +7,9 @@
   - [What is a shell](#what-is-a-shell)
   - [Difference between Home and Root directories](#difference-between-home-and-root-directories)
   - [Managing file ownership](#managing-file-ownership)
-  - [Managing file permissions](#managing-file-permissions)
-  - [Managing file permissions using numerical values](#managing-file-permissions-using-numerical-values)
+    - [Managing file permissions using numerical values](#managing-file-permissions-using-numerical-values)
     - [Different permission assignments](#different-permission-assignments)
-  - [Changing file permissions](#changing-file-permissions)
+    - [Changing file permissions](#changing-file-permissions)
   - [Bash script to install Nginx](#bash-script-to-install-nginx)
   - [Managing processes in Linux](#managing-processes-in-linux)
 
@@ -62,9 +61,7 @@ Why is it important
 - System stability and security could be compromised.
 - Collaboration would be difficult because access wouldn’t be properly controlled.
 
-## Managing file permissions
-
-## Managing file permissions using numerical values
+### Managing file permissions using numerical values
 Each permission has a number:
 
 - Read (r) = 4
@@ -99,9 +96,7 @@ For example: 644
 
     This means that the owner can read + write, group can read, others can read.
 
-
-
-## Changing file permissions
+### Changing file permissions
 1. What command changes file permissions?
 
     The command is:

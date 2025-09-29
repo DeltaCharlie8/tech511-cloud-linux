@@ -56,12 +56,11 @@ scp -i tech511-debbie-aws.pem -r C:\Users\debbi\Downloads\nodejs20-sparta-test-a
 ### You need to set the DB_Host before starting the app
 
 ## To run the script
-Please note: You will need 2 git terminals running, one connected to your local machine in the directory of your bash script and the other connected to your virtual machine in the home directory
+**Please note:** You will need 2 git terminals running, one connected to your local machine in the directory of your bash script and the other connected to your virtual machine in the home directory.
+<br>
 1. copy script from local machine
    ```
-   scp -i /path/to/your-key.pem prov-app.sh ubuntu@EC2_PUBLIC_IP:/home/ubuntu/
-   scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-app.sh ubuntu@3.250.114.43:~ 
-
+   scp -i /path/to/your-key.pem prov-app.sh ubuntu@EC2_PUBLIC_IP:~
    ```
 
    scp -i "C:\Users\debbi\.ssh\tech511-debbie-aws.pem" prov-db.sh ubuntu@34.247.163.40:~ 

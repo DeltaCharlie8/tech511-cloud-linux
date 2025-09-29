@@ -34,11 +34,13 @@
 
 
 ## Models of cloud deployment
+
 ### 1. Public cloud: 
 - used by or shared with the public
 - has multi tenants
 - owned and operated by a third party cloud service provider
 - delivered over the internet
+  
 ### 2. Private cloud: 
 - single tenant cloud, just has 1 occupant (the organisation that sets it up)
 - dedicated to a private organisation 
@@ -46,18 +48,22 @@
 - advantages 
   - not exposed to the public
   - complete control
+
 ### 3. Hybrid cloud:
 - mix of on premises and public cloud usually (database held on premises, the application hosted on public cloud)
+
 ### 4. Multi-cloud: 
 - uses more than 1 cloud provider to maintain the database and application
 
 ## Types of cloud services: Iaas, Paas, SaaS
+
 ### Infrastructure as a Service (Virtual Machine)
 Controls and is responsible for:
 - Virtualisation
 - Servers
 - Storage
 - Networking
+
 ### Platform as a Service (App Service)
 Controls and is responsible for:
 - Runtime
@@ -67,6 +73,7 @@ Controls and is responsible for:
 - Servers
 - Storage
 - Networking
+
 ### Software as a Service (Salesforce, Office 365)
 Controls and is responsible for:
 - Applications
@@ -83,6 +90,7 @@ Adv
 - information security team
   
 DisAdv
+- high energy costs
 
 ## OpEx vs CapEx
 OpEx: Operational Expenditure
